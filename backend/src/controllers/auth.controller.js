@@ -2,6 +2,8 @@ export const signup = (req,res)=>{
     const {fullName,email,password} = req.body
     try {
         //hashing passwords
+
+        //bla bla
     } catch (error) {
         
     }
