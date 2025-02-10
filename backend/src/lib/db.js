@@ -9,3 +9,4 @@ export const connectDB = async () =>{
         console.log("MongoDb connection error",error);
     }
 }
+
