@@ -54,7 +54,7 @@ export const useChatStore = create((set,get)=> ({
         //needed for optimisation
         socket.on("newMessage" , (newMessage) =>{
             set({
-                messages : [...get().message, newMessage], //keeping all prev msg in history and adding new msg at the end
+                messages : [...get().messages, newMessage], //keeping all prev msg in history and adding new msg at the end
             });
         });
     },
