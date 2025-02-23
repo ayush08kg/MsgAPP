@@ -53,6 +53,8 @@ export const useChatStore = create((set,get)=> ({
 
         //needed for optimisation
         socket.on("newMessage" , (newMessage) =>{
+            const isMessageSentFromSelectedUser = newMessage.senderId === selectedUser._id;
+            if(!isMessageSentFromSelectedUser) return ;
             set({
                 messages : [...get().messages, newMessage], //keeping all prev msg in history and adding new msg at the end
             });
